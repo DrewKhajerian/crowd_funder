@@ -1,8 +1,8 @@
-<h1>Projects</h1>
+<h1>Listing Projects</h1><br>
 
 <% @projects.each do |project| %>
 	<p>Title: <%= link_to project.title, project_path(project) %></p>
 	<p>Owner: <%= project.user.first_name %> <%= project.user.last_name %></p>
-	<p>Goal: <%= project.goal %></p>
+	<p>Goal: $<%= project.goal %></p>
 	<br>
 <% end %>
