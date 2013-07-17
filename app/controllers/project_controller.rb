@@ -6,6 +6,7 @@ class ProjectController < ApplicationController
 
 	def show
 		@project = Project.find(params[:id])
+		@show_view = true
 	end
 
 	def new
