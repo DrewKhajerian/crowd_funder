@@ -1,0 +1,19 @@
+<header>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">CrowdFunder</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="<%= 'active' if current_page? root_path %>">
+              <%= link_to 'Home', :root %>
+            </li>
+            <li class="<%= 'active' if current_page? project_index_path %>">
+              <%= link_to 'Projects', project_index_path %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
