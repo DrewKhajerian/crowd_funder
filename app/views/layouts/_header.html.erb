@@ -4,7 +4,7 @@
       <div class="container">
         <a class="brand" href="#">CrowdFunder</a>
         <div class="nav-collapse collapse">
-          <ul class="nav">
+          <ul class="nav" id="left">
             <li class="<%= 'active' if current_page? root_path %>">
               <%= link_to 'Home', :root %>
             </li>
@@ -14,7 +14,6 @@
           </ul>
           <ul class="nav pull-right">
             <% if current_user %>
-              <li><%= link_to current_user.email, user_path(current_user)%></li>
               <li><%= link_to "Log out", session_path("current"), :method => :delete %></li>
             <% else %>
               <li><%= link_to "Login", new_session_path %></li>

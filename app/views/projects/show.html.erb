@@ -1,8 +1,20 @@
 <h1><%= @project.title %></h1>
-<h3>By: <%= @project.user.first_name %> <%= @project.user.last_name %></h3>
+<h4>By: <%= @project.user.first_name %> <%= @project.user.last_name %></h4>
 
 <p>Teaser: <%= @project.teaser %></p>
 <p>Description: <%= @project.description %></p>
 <p>Goal: $<%= @project.goal %></p>
+<% if current_user %>
+	<button><%= link_to "Back This Project", new_project_pledge_path(@project) %></button>
+<% else %>
+	<button><%= link_to "Back This Project", new_session_path %></button>
+	<br>
+<% end %>
 
+
+<h4>Pledges:</h4>
+<% @project.pledges.each do |pledge| %>
+	<p>Amount: <%= pledge.amount %></p>
+	<p>User: <%= link_to pledge.user.email, user_path(pledge.user) %></p><br>
+<% end %>
 
