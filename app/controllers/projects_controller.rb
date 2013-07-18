@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
 	def index
-		@projects = Project.all
+		@projects = Project.order('projects.created_at DESC').page(params[:page])
 	end
 
 	def show
@@ -9,18 +9,5 @@ class ProjectsController < ApplicationController
 		@show_view = true
 	end
 
-	def new
-		@project = Project.new
-	end
-
-	def create
-		@project = Project.new(params[:project])
-
-		if @project.save
-			redirect_to project_path(@project)
-		else
-			render :new
-		end
-	end
 
 end

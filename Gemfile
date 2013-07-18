@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 gem 'pg'
 gem 'sorcery'
 
