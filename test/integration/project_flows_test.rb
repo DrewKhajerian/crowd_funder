@@ -8,9 +8,9 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
     project3 = FactoryGirl.create(:project, :title => "Project 3")
 
     # Go to the page with the projects
-    visit "/project"
+    visit "/projects"
     # Assert the page we're on is the page with the projects
-    assert_equal project_index_path, current_path
+    assert_equal projects_path, current_path
 
     # Assert this page has the words 'Listing Projects'
     assert page.has_content?('Listing Projects')
@@ -41,7 +41,7 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
     # Click on the link to Projects
     find('.navbar ul').click_link('Projects')
     # Assert the page we're on is the projects page
-    assert_equal project_index_path, current_path
+    assert_equal projects_path, current_path
     # Assert the projects nav element is active
     assert_equal "Projects", find('.navbar ul li.active a').text
     

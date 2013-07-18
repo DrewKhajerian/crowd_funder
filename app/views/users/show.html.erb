@@ -1,0 +1,12 @@
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+<h3>Projects</h3>
+
+<% @user.projects.each do |projects| %>
+	<div class="well">
+		<p>Title: <%= link_to project.title, project_path(project) %></p>
+		<p>Teaser: <%= project.teaser %></p>
+		<p>Description: <%= project.description %></p>
+		<p>Goal: $<%= project.goal %></p><br>
+	</div>
+<% end %>
