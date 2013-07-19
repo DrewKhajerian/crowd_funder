@@ -1,8 +1,16 @@
 class My::ProjectsController < ApplicationController
 
+	before_filter :require_login
+  before_filter :require_project, except: [:index, :new, :create]
+
 	def index
 		@projects = current_user.projects.order('projects.created_at DESC').all
 	end
+
+	# def show
+	# 	@project = current_user.projects
+	# 	@total_pledged
+	# end
 
 	def new
 		@project = current_user.projects.build
@@ -10,10 +18,10 @@ class My::ProjectsController < ApplicationController
 	end
 
 	def create
-		@project = current_user.project.build(params[:project])
+		@project = current_user.projects.build(params[:project])
 
 		if @project.save
-			redirect_to my_project_path(@project), :notice => "Project created!"
+			redirect_to project_path(@project), :notice => "Project created!"
 		else
 			render :new
 		end
@@ -28,6 +36,16 @@ class My::ProjectsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  protected
+
+  def require_project
+    @project = current_user.projects.find params[:id]
+  end
+
+  def nav_state
+    @nav = :my_projects
   end
 
 end

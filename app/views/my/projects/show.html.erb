@@ -1,4 +1,4 @@
-<div class="span5">
+<div class="span6">
 	<h1><%= @project.title %></h1>
 	<h4>By: <%= @project.user.first_name %> <%= @project.user.last_name %></h4>
 
@@ -14,13 +14,6 @@
 	<div class="progress">
 		<div class="bar" style="width: <%=@percentage%>%;"></div>
 	</div>
-	<% if current_user %>
-		<button class='btn btn-primary'><%= link_to "Back This Project", new_project_pledge_path(@project) %></button><br/>
-		<br>
-	<% else %>
-		<button class="btn btn-primary"><%= link_to "Back This Project", new_session_path %></button><br/>
-		<br>
-	<% end %>
 
 
 	<h4>Pledges:</h4>
@@ -29,5 +22,5 @@
 		<p>User: <%= link_to pledge.user.email, user_path(pledge.user) %></p>
 		<p>When: <%= pledge.created_at%></p><br>
 	<% end %>
-</div>
 
+</div>

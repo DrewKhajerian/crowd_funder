@@ -20,10 +20,10 @@ Project.destroy_all
 # project6 = user.projects.create!(title: "Project 12", teaser: "Teaser text 12",
 #   description: "Description 12", goal: 50000)
 
-user = User.create!(first_name: "John", last_name: "Doe", email: "john@doe.com", password: "password")
+# user = User.create!(first_name: "John", last_name: "Doe", email: "john@doe.com", password: "password")
 
-50.times do |i|
-  project1 = user.projects.create!(title: "Project #{i}", teaser: "Teaser text #{i}",
-    description: "description #{i}", goal: 13000)
-end
+# 50.times do |i|
+#   project1 = user.projects.create!(title: "Project #{i}", teaser: "Teaser text #{i}",
+#     description: "description #{i}", goal: 13000)
+# end
 

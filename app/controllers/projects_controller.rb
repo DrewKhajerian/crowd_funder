@@ -7,6 +7,8 @@ class ProjectsController < ApplicationController
 	def show
 		@project = Project.find(params[:id])
 		@show_view = true
+		@total_pledged = 0
+		@percentage = 0
 	end
 
 

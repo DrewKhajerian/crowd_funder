@@ -2,13 +2,4 @@
 
 <hr/>
 
-<%= form_for [:my, @project] do |f| %>
-
-
-  <%= render 'form' %>
-
-  <div class="form-actions">
-    <%= f.submit 'Publish Project', class: 'btn' %>
-  </div>
-
-<% end %>
+<%= render 'form' %>

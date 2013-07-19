@@ -6,6 +6,7 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'pg'
 gem 'sorcery'
+gem 'carrierwave' # for Image uploading
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

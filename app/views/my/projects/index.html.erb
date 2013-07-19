@@ -3,13 +3,7 @@
 <button class="btn btn-primary"><%= link_to "Create New Project", new_my_project_path %></button><br/>
 	<br>
 <ul>
-	<% @projects.each do |project| %>
-		<li class="project">
-		  <%= link_to project.title, project %>
-		  <br />
-		  <p>
-		    <%= project.teaser %>
-		  </p>
-		</li>
-	<% end %>
+	<%= render @projects %>
 </ul>
+
+

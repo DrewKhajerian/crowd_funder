@@ -23,7 +23,7 @@ class My::ProjectFlowsTest < ActionDispatch::IntegrationTest
 
     fill_in 'project[title]', with: "It is really my project"
 
-    click_button 'Update Project'
+    click_button 'Publish Project'
 
     assert_equal my_projects_path, current_path
     assert page.has_content?("It is really my project")
