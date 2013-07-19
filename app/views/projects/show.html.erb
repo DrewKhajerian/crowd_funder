@@ -5,9 +5,9 @@
 <p>Description: <%= @project.description %></p>
 <p>Goal: $<%= @project.goal %></p>
 <% if current_user %>
-	<button><%= link_to "Back This Project", new_project_pledge_path(@project) %></button>
+	<button class='btn btn-primary'><%= link_to "Back This Project", new_project_pledge_path(@project) %></button>
 <% else %>
-	<button><%= link_to "Back This Project", new_session_path %></button>
+	<button class="btn btn-primary"><%= link_to "Back This Project", new_session_path %></button>
 	<br>
 <% end %>
 
@@ -15,6 +15,7 @@
 <h4>Pledges:</h4>
 <% @project.pledges.each do |pledge| %>
 	<p>Amount: <%= pledge.amount %></p>
-	<p>User: <%= link_to pledge.user.email, user_path(pledge.user) %></p><br>
+	<p>User: <%= link_to pledge.user.email, user_path(pledge.user) %></p>
+	<p>When: <%= pledge.created_at%></p><br>
 <% end %>
 

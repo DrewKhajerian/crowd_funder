@@ -12,7 +12,7 @@
               <%= link_to 'Projects', projects_path %>
             </li>
             <% if current_user %>
-              <li class="<%= 'active' if current_page? my_projects_path %>">
+              <li class="<%= 'active' if current_page? my_projects_path or @new_my %>">
                 <%= link_to 'My Projects', my_projects_path %>
               <li>
             <% end %>

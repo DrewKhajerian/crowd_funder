@@ -6,6 +6,7 @@ class My::ProjectsController < ApplicationController
 
 	def new
 		@project = current_user.projects.build
+		@new_my = true
 	end
 
 	def create

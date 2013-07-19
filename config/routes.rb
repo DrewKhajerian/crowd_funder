@@ -2,7 +2,7 @@ CrowdFunder::Application.routes.draw do
  
 	root :to => 'welcome#index'
 
-	resources :projects do 
+	resources :projects, only: [:index, :show] do 
     resources :pledges, only: [:new, :create]
   end
   

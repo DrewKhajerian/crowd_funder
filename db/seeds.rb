@@ -11,13 +11,14 @@
 # User.destroy_all
 # Project.destroy_all
 
-# user = User.create!(first_name: "John", last_name: "Doe", email: "john@doe.com", password: "password")
+# user = User.create!(first_name: "King", last_name: "Buzzo", email: "king@buzzo.com", password: "foobar")
 
-# project1 = user.projects.create!(title: "Project 1", teaser: "Teaser text 1",
-#   description: "Description 1", goal: 13000)
+# project4 = user.projects.create!(title: "Project 10", teaser: "Teaser text 10",
+#   description: "Description 10", goal: 10000)
 
-# project2 = user.projects.create!(title: "Project 2", teaser: "Teaser text 2",
-#   description: "Description 2", goal: 210000)
+# project5 = user.projects.create!(title: "Project 11", teaser: "Teaser text 11",
+#   description: "Description 11", goal: 180000)
 
-# project2 = user.projects.create!(title: "Project 3", teaser: "Teaser text 3",
-#   description: "Description 3", goal: 30000)
+# project6 = user.projects.create!(title: "Project 12", teaser: "Teaser text 12",
+#   description: "Description 12", goal: 50000)
+
